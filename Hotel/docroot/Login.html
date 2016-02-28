@@ -1,0 +1,52 @@
+<html>
+ <style type="text/css">
+   body {background-image:url('3.jpg');}
+</style>
+
+<h1 align="center"> ABC Hotel  </h1>
+<head>
+<script type="text/javascript">
+function validate()
+{
+if(document.myform.name.value=="")
+{
+alert("Enter username");
+document.myform.name.focus();
+return false;
+}
+if(document.myform.pass.value=="")
+{
+alert("Enter password");
+document.myform.pass.focus();
+return false;
+}
+return true;
+}
+
+</script>
+</head>
+
+<body bgcolor="876543">
+
+<form name="myform"  onsubmit="return validate();" method="post" action="loginHandler">
+ 
+<table border="5" align="center" bgcolor="787878">
+<caption>Manager Login</caption>
+<tr>
+      <td> USERNAME </td>
+      <td> <input type="text" name="name"> </td>
+ </tr>
+
+  <tr> 
+      <td> PASSWORD</td>
+      <td> <input type="password" name="pass"> </td>
+ </tr>
+  <tr> 
+      <td></td>
+      <td> <input type="submit"  value="Login" > </td>
+ </tr>
+
+</table>
+</form>
+</body>
+</html>
