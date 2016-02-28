@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" " http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<!-- 
+Design by Free CSS Templates 
+http://www.freecsstemplates.org/
+Released for free under a Creative Commons Attribution 2.5 License 
+Name       : chasmogamous 
+Description: A two-column, fixed-width template suitable for business sites and blogs. 
+Version    : 1.0 
+Released   : 20080116 
+--> 
+<html xmlns=" http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+<meta name="keywords" content="" /> 
+<meta name="description" content="" /> 
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">
+function validate()
+{
+
+flag=false;
+
+
+     for(i=0;i<document.form3.type.length;i++)
+     {
+	if(document.form3.type[i].checked)
+	{
+	  flag=true;
+        }
+       
+     }
+
+     if(!flag)
+      {
+	alert("Please select AC or NonAC");
+	return false;
+      }
+
+      
+      flag1=false;
+
+
+   for(i=0;i<document.form3.room.length;i++)
+     {
+	if(document.form3.room[i].checked)
+	{
+	  flag1=true;
+        }
+       
+     }
+
+if(!flag1)
+      {
+	alert("Please select bed room type");
+	return false;
+      }
+      
+
+
+
+
+
+      var selectedOption = form3.room.selectedIndex;
+      if (selectedOption==0)
+      {
+        flag2 = false;
+        alert("Please select a room");
+	return false;
+      }
+ }
+
+</script> 
+</head> 
+<body> 
+<div id="header"> 
+<div id="logo"> 
+ <h1>ABC Hotel</h1> 
+ <h2>Comfort Zone</h2> 
+</div> 
+<div id="menu"> 
+ <ul> 
+  <li><a href="adminhome.html" accesskey="1" title="">Home</a></li>
+  <li><a href="addroom.html" accesskey="2" title="">Add Room</a></li>   
+  <li class="first"><a href="checkavailability.html" accesskey="3" title="">Check Availability and Book</a></li> 
+  <li><a href="HotelHandler?choice=viewOccupied" accesskey="4" title="">View Ocuupied rooms</a></li> 
+  <li><a href="HotelHandler?choice=viewall" accesskey="5" title="">View Rooms</a></li> 
+  <li><a href="HotelHandler?choice=checkout" accesskey="6" title="">Check out</a></li> 
+    <li><a href="logout.jsp" accesskey="7" title="">Logout</a></li>
+ </ul> 
+               
+</div><hr /> 
+  
+  
+<form name="form3" action="HotelHandler"  onsubmit="return validate();">
+
+
+<table align="center">
+<tr>
+
+
+
+
+ <tr>
+  <td> Select type:</td> 
+ <td>   <input type="radio" name="type"  value="ac"/> AC 
+ <input type="radio" name="type"  value="nonac"/>  NONAC</td>
+  </tr>
+  
+
+
+ <tr>
+  <td> Bedroom Type:</td> 
+ <td>   <input type="radio" name="room"  value="2"/> Two 
+ <input type="radio" name="room"  value="3"/>  Three</td>
+  </tr>
+
+
+
+
+ <tr>
+ <td></td><td>
+  <input type="submit" value="submit"/>
+  </td>
+  </tr>
+  <input type="hidden" name="choice" value="checkavailability" />
+</table>
+</form>
+</div> 
+<!-- end page --> 
+</body> 
+</html> 
